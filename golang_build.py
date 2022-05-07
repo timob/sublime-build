@@ -86,8 +86,8 @@ class GolangBuildCommand(sublime_plugin.WindowCommand):
 
         go_bin, env = _get_config(
             'go',
-            set(['GOPATH']),
-            GO_ENV_VARS - set(['GOPATH']),
+            set([]),
+            GO_ENV_VARS,
             view=self.window.active_view(),
             window=self.window,
         )
@@ -325,8 +325,8 @@ class GolangBuildGetCommand(sublime_plugin.WindowCommand):
 
         go_bin, env = _get_config(
             'go',
-            set(['GOPATH']),
-            GO_ENV_VARS - set(['GOPATH']),
+            set([]),
+            GO_ENV_VARS,
             view=self.window.active_view(),
             window=self.window,
         )
